@@ -13,7 +13,7 @@ Syllabus Summarizer - The user can query any course present in the syllabus and 
 Emotion Detection Chatbot -  It detects the topic the user is talking about and summarizes the overall mood of the user and based on the topic and polarity (emotion) of the user text, responses will be generated.
 
 # Technologies Used
-* Python3
+![](https://img.shields.io/badge/Language-Python-informational?style=flat&logo=data:image/svg%2bxml;base64,<BASE64_DATA>) <br>
 * Flask
 * Tika, Keras, Numpy, Beautiful Soup
 * HTML, CSS, Javascript
