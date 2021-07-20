@@ -1,0 +1,121 @@
+html, body {
+    margin:0;
+    padding:0;
+    background-color: rgb(0, 0, 0);
+}
+.container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+}
+.syllabus{
+    height : 60%;
+    top : 100px;
+    left : 250px;
+    width : 50%;
+    padding : 50px;
+    border : 5px  #f3f3f3;
+    border-style: solid;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+    position : fixed;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px #f3f3f3;
+}
+.main_title{
+    height : 100%;
+    width : 100%;
+    top : 20px;
+    position : fixed;
+    text-align: center;
+    font-size : 50px;
+    font-family: 'Gill Sans MT';
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 900;
+    color : white;
+}
+.object_title{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    text-align: center;
+    text-decoration: brown;
+    text-emphasis: bold;
+    font-size : 50px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color : indigo;
+}
+.text_box{
+    position: absolute;
+    border-style: 2px solid;
+    top : 35%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    width : 70%;
+    height : 30px;
+    border-radius: 10px;
+    font-family: cursive;
+}
+.submit{
+    position: absolute;
+    top : 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height : 30px;
+    width : 100px;
+    background-color: indigo; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    height : 30px;
+    width : 100px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.result{
+    position: absolute;
+    border-style: rigid;
+    top : 75%;
+    left : 50%;
+    height : 46%;
+    transform: translate(-50%, -50%);
+    width : 90%;
+    font-size: 14px;
+    word-wrap: normal;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.check{
+    position: absolute;
+    top : 25%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width : 70%;
+    height : 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid black;
+    
+  }
+.button1:hover {
+    background-color: indigo;
+    border : 2px solid indigo;
+    color: white;
+  }
+  

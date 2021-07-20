@@ -1,0 +1,147 @@
+html, body {
+    margin:0;
+    padding:0;
+    background-color: rgb(0, 0, 0);
+}
+.heading{
+    position: fixed;
+    font-size : 20px;
+    font-family: 'Gill Sans MT';
+    font-stretch: extra-expanded;
+    font-style: oblique;
+    font-weight: 900;
+    color : white;
+}
+.box{
+    height : 15%;
+    top : 100px;
+    left : 50px;
+    width : 30%;
+    padding : 50px;
+    border : 5px  #f3f3f3;
+    border-style: solid;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+    position : fixed;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px #f3f3f3;
+    overflow-x: hidden;
+}
+.box2{
+    height : 15%;
+    top : 60%;
+    left : 50px;
+    width : 30%;
+    padding : 50px;
+    border : 5px  #f3f3f3;
+    border-style: solid;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+    position : fixed;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px #f3f3f3;
+    overflow-x: hidden;
+}
+.box3{
+    height : 70%;
+    top : 20%;
+    left : 50%;
+    width : 42%;
+    padding : 20px;
+    border : 5px  #f3f3f3;
+    border-style: solid;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+    position : fixed;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px #f3f3f3;
+}
+.first{
+    height : 100%;
+    width : 100%;
+    top : 20px;
+    left : 50px;
+}
+.second{
+    height : 100%;
+    width : 100%;
+    top : 48%;
+    left : 50px;
+}
+.third{
+    height : 100%;
+    width : 100%;
+    top : 5%;
+    left : 60%;
+}
+.text_box{
+    position: absolute;
+    border-style: 2px solid;
+    transform: translate(-50%, -50%);
+    width : 40%;
+    height : 25px;
+    border-radius: 10px;
+    left : 24%;
+    font-family: cursive;
+}
+.link_text{
+    text-decoration: none;
+    font-size: large;
+    color : black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f3f3f3; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background:black; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+  .button{
+    height: 25px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    border : 2px solid black;
+    border-spacing : 20px;
+    border-radius: 10px;
+    background-color: beige;
+    font-weight: 900;
+    font-size: initial;
+    color : black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    text-decoration: none;
+    font-family: 'Gill Sans MT';
+    transition-duration: 0.4s;
+    cursor: pointer;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid white;
+    font-weight: bolder;
+    word-wrap: break-word;
+    white-space: initial;
+  }
+  .button1:hover {
+    background-color: orangered;
+    border: 2px solid orangered;
+    color: white;
+    font-weight: bolder;
+  }

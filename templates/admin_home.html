@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+        <title>Admin Home Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        <link rel = "stylesheet" href = "..\static\styles\login_page.css">
+        <title>Staff Home</title>
+    </head>
+    <body>
+        <div class = "main_title">Prep Buddy</div>
+        <div class = "select_box">
+            <div class = "title">Your Files</div>
+            <div class = "files_box">
+                {%for doc in docs%}
+                    <li><a id = "l1" class = "link_text" href = "{{doc[0]}}" >{{doc[1]}}</a></li><br>
+                {%endfor%}
+            </div>
+            <label for="file" class="button2 first">
+                Upload a File
+            </label>
+            <p id = "test"></p>
+            <form action = "http://localhost:5000/upload_file" enctype="multipart/form-data" method = "POST">
+                <input id="file" name = "file1" onchange="this.form.submit()" type="file">
+                <input type = "text"  id = "ID" name = "ID" style="visibility: hidden;">
+            </form>
+        </div>
+        <script>
+            window.onload = function(){
+                var url = document.location.href.split("//");
+                id = url[1];
+                $("#ID").val(id.split('/')[2]);
+            };
+        </script>
+    </body>
+</html>

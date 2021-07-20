@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      .box1{
+        position: absolute;
+        border : 2px solid black;
+        border-radius: 2px;
+        overflow-x: hidden;
+        width : 40%;
+        left : 50px;
+        top : 20%;
+        height : 30%;
+        text-decoration: none;
+      }
+      .box2{
+        position: absolute;
+        border : 2px solid black;
+        border-radius: 2px;
+        overflow-x: hidden;
+        width : 40%;
+        left : 50px;
+        top : 65%;
+        height : 30%;
+        text-decoration: none;
+      }
+      .box3{
+        position: absolute;
+        top : 40%;
+        left : 57%;
+      }
+      .v1{
+        position: absolute;
+        border-left: 5px solid black;
+        height : 400px;
+        left : 50%;
+      }
+    </style>
+    <title>Admin Home</title>
+</head>
+<body>
+    <h1>&nbsp;&nbsp;Files uploaded by all staffs</h1>
+    <br>
+    <div class = 'box1'>
+    {%for doc in f1%}
+        <a style = 'text-decoration: none;' href = {{ url_for("download" , id = doc.split('\\')[-2] , filename = doc.split('\\')[-1]) }}>{{doc.split('\\')[-1]}}</a>
+        <BR><BR>
+    {%endfor%}
+  </div><br>
+    <h1 style="position : absolute; top : 50%;">&nbsp;&nbsp;Documents created by you</h1>
+    <br>
+    <div class = 'box2'>
+    {%for doc in f2%}
+        <a style = 'text-decoration: none;' href = {{ url_for("download" , id = doc.split('\\')[-2] , filename = doc.split('\\')[-1]) }}>{{doc.split('\\')[-1]}}</a> 
+    <BR><BR>{%endfor%}
+    </div>
+    <div class = 'v1'></div>
+    <div class = 'box3'>
+    <h1>Upload Highlighted documents</h1>
+    <br>
+    <form action = 'http://localhost:5000/admin_upload' enctype="multipart/form-data" method = "POST">
+        <input type = 'file' name = 'files' multiple><br>
+        <br>
+        <input type = 'text' name = 'name' placeholder="Enter the file name"><br>
+        <input type = "text"  id = "ID1" style = "visibility: hidden;" name = "ID1">
+        <br>
+        <input type = 'submit' value="Generate"> 
+    </form>
+  </div>
+    <script>
+        window.onload = function(){
+            var url = document.location.href.split("//");
+            var id = url[1];
+            $("#ID1").val(id.split('/')[2]);
+        };
+    </script>
+</body>

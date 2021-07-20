@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" href = "..\static\styles\syllabus_summarizer.css">
+    <title>Syllabus Summarizer</title>
+</head>
+<body>
+    <div class = "container">
+        <a class = "main_title" href = "http://localhost:5000" style="text-decoration: none;">Prep Buddy</a><br>
+        <div class = "syllabus">
+            <div class = "object_title">
+                Syllabus Summarizer             
+            </div><br>
+            <form action = "http://localhost:5000/syllabus_summarizer" method = "post">
+                <div class = 'check'>
+                    <input type = 'radio' name = 'choice' value = 'topic' id = 'topic'>Topic Wise&ensp;<input type = 'radio' name = 'choice' id = 'syllabus' value = 'syllabus'>Get full syllabus
+                </div>
+                    <input type = "text" name = "search_term" class = "text_box" placeholder="Enter any topic name" value = '{{val}}'>
+                    <br>
+                    <input type = "submit"  name = "Search" class = "submit button1">
+                    <textarea class = 'result' wrap = 'soft' readonly>{{res}}</textarea>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <link rel = "stylesheet" href = "..\..\..\static\styles\smart_notes1.css">
+            <title>Smart Notes</title>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "heading first">
+                <h1>Placement Docs</h1>
+            </div><br>
+            <div class = "box">
+                {%for doc in pl%}
+                    <a class = 'link_text' href = {{ url_for("download" , id = doc.split('\\')[-2] , filename = doc.split('\\')[-1]) }}>{{doc.split('\\')[-1]}}</a><br><br>
+                {%endfor%}
+            </div>
+            <br><br>
+            <div class = "heading second">
+                <h1>Endsem Docs</h1><br>
+            </div>
+            <div class = "box2">
+                {%for doc in end%}
+                    <a class = 'link_text' href = {{ url_for("download" , id = doc.split('\\')[-2] , filename = doc.split('\\')[-1]) }}>{{doc.split('\\')[-1]}}</a><br>
+                    <br>    
+                {%endfor%}
+            </div>
+            <br>
+            <div class = "heading third">
+                <h1>Keyword Based Search</h1>
+            </div>
+            <div class = "box3">
+                <form action = 'http://localhost:5000/getres' method = 'POST'>
+                    <input type = 'text' class = 'text_box' placeholder="Enter the search term" name = 'term'>
+                    <br><br>
+                    Choose the staff<br>
+                    <div style = "height: 60px; overflow-x: hidden;">
+                        <input type = 'checkbox' onclick="toggle(this)" />Any Staff<br>
+                        {%for id in staffs.keys()%}
+                            <input type = 'checkbox' name = 'staff' value = {{id}}>{{staffs[id]}}<br>
+                        {%endfor%}
+                    </div>
+                    <br>
+                    <div id = 'res' name = 'res' wrap = 'soft' readonly style="height: 280px; width: 550px;font-size:15px; border :2px solid black;padding : 5px; overflow-x: hidden;">{{res|safe}}</div>
+                    <input type = 'text' style="visibility: hidden;" name = 'subject' value = {{sub}}><br>
+                    <input type = 'submit' value="Search">
+            </form>
+            </div>
+            <script language="JavaScript"> 
+                window.onload = function(){
+                    var node = document.getElementById("res");
+                    var text = node.textContent || node.innerHTML;
+                    //alert(text);
+                    if(text == "temp")
+                        document.getElementById("res").textContent = "";
+                }
+                function toggle(source) {
+                checkboxes = document.getElementsByName('staff');
+                for(var i=0, n=checkboxes.length;i<n;i++) {
+                    checkboxes[i].checked = source.checked;
+                }
+                }
+            </script>
+        </div>
+    </body>
+</html>
